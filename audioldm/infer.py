@@ -11,7 +11,28 @@ from torch.utils.data import DataLoader
 #from pytorch_lightning import seed_everything
 from audioldm.utilities.model_util import instantiate_from_config
 
-#def infer(dataset_json, configs,config_yaml_path, exp_group_name, exp_name):
+"""
+
+def infer_long(prompt, total_secs=60, seg_secs=10, guidance_scale=3.5):
+    n_segments = total_secs // seg_secs
+    final_wav = []
+    for i in range(n_segments):
+        audio_i = latent_diffusion.generate_sample(
+            ...
+            name=f"infer_seg_{i}"
+        )
+        wav_path = os.path.join(audio_i, sorted(os.listdir(audio_i))[0])
+        segment, sr = sf.read(wav_path)
+        final_wav.append(segment)
+    combined = np.concatenate(final_wav, axis=0)
+    out_path = f"infer/combined_{prompt[:20]}.wav"
+    sf.write(out_path, combined, sr)
+    return out_path
+
+"""
+
+
+
 def infer(title, text, seconds, guidance_scale):
 
     assert torch.cuda.is_available(), "CUDA is not available"
@@ -51,7 +72,7 @@ def infer(title, text, seconds, guidance_scale):
         batch_size=1,
     )
     
-    checkpoint_path = "./audioldm/ckpt/checkpoint-fad-133.00-global_step=64999.ckpt"
+    checkpoint_path = "./audioldm/ckpt/audioldm-m-full-finetuned.ckpt"
 
     if os.path.isfile(checkpoint_path):
         resume_from_checkpoint = checkpoint_path

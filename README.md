@@ -39,6 +39,9 @@ cd AudioLDM_finetuned
 conda env create -f environment.yml
 conda activate audioldm-finetuned-env
 python app.py
+
+poetry install           # instala todo, incluidos requests y tqdm
+poetry run get-checkpoints
 ```
 
 

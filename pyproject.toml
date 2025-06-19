@@ -29,6 +29,10 @@ deep_translator
 mistralai
 gradio
 
+[tool.poetry.scripts]
+get-checkpoints = "src.get_checkpoints:main"
+
+
 
 [build-system]
 requires = ["poetry-core"]
