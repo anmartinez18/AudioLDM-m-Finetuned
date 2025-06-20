@@ -1,8 +1,8 @@
 import gradio as gr
-from src.process_text import preprocess
-from src.mistral import enrich_prompt
-from audioldm.infer import generate
-from src.utils import  process_name
+from audioldm_finetuned.src.process_text import preprocess
+from audioldm_finetuned.src.mistral import enrich_prompt
+from audioldm_finetuned.infer import infer
+from audioldm_finetuned.src.utils import  process_name
 
 custom_css = """
    
@@ -38,7 +38,7 @@ def generate_audio_file(text, seconds, guidance):
         title_wav = process_name(text) + ".wav"
         text_en = preprocess(text)
         enriched_text = enrich_prompt(text_en)
-        audio = generate(title_wav, enriched_text, seconds, guidance)
+        audio = infer(title_wav, enriched_text, seconds, guidance)
         final_path = audio + "/" + title_wav
         return enriched_text, final_path
     raise gr.Error(" ✏️ Please, enter a description before submitting 💥!", duration=5)
@@ -46,27 +46,23 @@ def generate_audio_file(text, seconds, guidance):
 
 with gr.Blocks(css=custom_css, theme=gr.themes.Soft()) as demo:
     gr.Markdown("""
-    # 🎧 Prueba interfaz AudioLDM finetuned
-    Esta es una prueba de AudioLDM finetuneado para ver el funcionamiento de todo esto. 
+    #  🌄 🍂AudioLDM finetuned for Soundscape Generation 🌳🌊
     """, elem_classes="center-text")
 
     with gr.Row():
         with gr.Column():
             description_input = gr.Textbox(label="Text description (English or Spanish)")
-            duration = gr.Slider(10, 60, step=10, value=10, label="Duration in seconds (máx. 180 sec - 3 min)")
+            duration = gr.Slider(1, 10, step=1, value=10, label="Duration in seconds")
             guidance_scale = gr.Slider(0.1, 5.0, value=3.5, step=0.1, label="Guidance scale")
             submit_btn = gr.Button("Submit")
 
         with gr.Column():
-            output_text = gr.Textbox(label="Resultado", interactive=False)
-            output_audio = gr.Audio(type="filepath", label="🔊 Listen & Download")
+           output_audio = gr.Audio(type="filepath", label="🔊 Listen & Download")
     
 
 
-    submit_btn.click(fn=generate_audio_file, inputs=[description_input, duration, guidance_scale], outputs=[output_text, output_audio])
+    submit_btn.click(fn=generate_audio_file, inputs=[description_input, duration, guidance_scale], outputs=[output_audio])
     
-
-
 demo.launch()
 #demo.launch(share=True)
 

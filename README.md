@@ -1,6 +1,6 @@
-#  AudioLDM_finetuned
+# AudioLDM Finetuned for soundscape generation
 
-# 🌍 🌄 Improved Soundscape Generator 🌳s AudioLDM + Mistral LLM 🐦
+# 🌄 Improved Soundscape Generator 🌳 AudioLDM + Mistral LLM 🐦
 
 This project generates realistic natural soundscapes from short text descriptions in **Spanish** or **English**, through an interactive web interface built with Gradio.
 Uses the fine-tuned **AudioLDM** model and leverages the potential of the LLM **Mistral-7B** model to enrich messages for consistent results.
@@ -14,13 +14,7 @@ Uses the fine-tuned **AudioLDM** model and leverages the potential of the LLM **
 - The enriched text is passed to AudioLDM to start the audio generation process.
 - The web interface allows users to customize key generation parameters:
 
-    - **Text Description 📝:** You can enter your prompt in English or Spanish
-    (e.g. "tormenta en la selva" / `"storm in the jungle")
-
-    - **Duration (seconds) ⏱️:** Choose the length of the generated soundscape, from 10 to 180 seconds (3 minutes max)
-
-    - **DDIM Steps 🌋:** Controls the number of inference steps in the diffusion process.
-
+    - **Text Description 📝:** You can enter your prompt in English or Spanish  (e.g. "tormenta en la selva" / `"storm in the jungle")
     - **Guidance Scale 🍀:** Adjusts the strength of text conditioning. Higher values make audio generation more aligned with the prompt.
 
 - Once the audio is generated, you can play it automatically, download it or generate a new one.
@@ -29,20 +23,35 @@ Uses the fine-tuned **AudioLDM** model and leverages the potential of the LLM **
 
 ## 🌧️ Requirements 📦 
 
+    - ⚠️ The full system (AudioLDM Medium Finetuned Checkpoint + Code + VAE + CLAP) requires 13GB of disk space.
+    - CUDA is highly recommended
 
 
 ## 🌵 Instalation ⚙️ 
 
 ```shell
+# 1) Create conda environment
+conda env create -n audioldm_finetuned python=3.10
+conda activate audioldm_finetuned
+
+# 2) Clone the repo
 git clone https://github.com/anmartinez18/AudioLDM_finetuned.git
 cd AudioLDM_finetuned
-conda env create -f environment.yml
-conda activate audioldm-finetuned-env
-python app.py
 
-poetry install           # instala todo, incluidos requests y tqdm
+# 3) Install running environment
+pip install poetry
+poetry install
+
+# 4) Download checkpoints (AudioLDM, VAE, CLAP, fine-tune)
 poetry run get-checkpoints
+
 ```
 
-
 ## 🔥 Web App 🦉
+
+```shell
+# 5) Launch the web application powered by Gradio
+python app.py
+
+# Enjoy!
+
