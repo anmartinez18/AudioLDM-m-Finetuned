@@ -23,8 +23,8 @@ Uses the fine-tuned **AudioLDM** model and leverages the potential of the LLM **
 
 ## 🌧️ Requirements 📦 
 
-    - ⚠️ The full system (AudioLDM Medium Finetuned Checkpoint + Code + VAE + CLAP) requires 13GB of disk space.
-    - CUDA is highly recommended
+- ⚠️ The full system (AudioLDM Medium Finetuned Checkpoint + Code + VAE + CLAP) requires 13GB of disk space.
+- CUDA is highly recommended
 
 
 ## 🌵 Instalation ⚙️ 
