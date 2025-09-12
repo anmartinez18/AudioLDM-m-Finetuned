@@ -7,7 +7,7 @@ import sys
 # Captura los argumentos
 argumentos = sys.argv
 
-api_key = os.environ["MISTRAL_API_KEY"] = "qTowDtjxIdz2q1vgT8t0LiIMbNG2abNa"
+api_key = os.environ["MISTRAL_API_KEY"] = "OWqBYgoTyHfQq3DcpOXSJlRKLpPWqdUe"
 
 model_id = "open-mistral-7b"
 client = Mistral(api_key=api_key)

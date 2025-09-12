@@ -23,23 +23,24 @@ Uses the fine-tuned **AudioLDM** model and leverages the potential of the LLM **
 
 ## 🌧️ Requirements 📦 
 
-    - ⚠️ The full system (AudioLDM Medium Finetuned Checkpoint + Code + VAE + CLAP) requires 13GB of disk space.
-    - CUDA is highly recommended
+- ⚠️ The full system (AudioLDM Medium Finetuned Checkpoint + Code + VAE + CLAP) requires 13GB of disk space.
+- CUDA is highly recommended
 
 
 ## 🌵 Instalation ⚙️ 
 
 ```shell
 # 1) Create conda environment
-conda env create -n audioldm_finetuned python=3.10
+conda create -n audioldm_finetuned python=3.10
 conda activate audioldm_finetuned
 
 # 2) Clone the repo
-git clone https://github.com/anmartinez18/AudioLDM_finetuned.git
-cd AudioLDM_finetuned
+git clone https://github.com/anmartinez18/AudioLDM-m-Finetuned.git
+cd AudioLDM-m-Finetuned
 
 # 3) Install running environment
 pip install poetry
+poetry lock
 poetry install
 
 # 4) Download checkpoints (AudioLDM, VAE, CLAP, fine-tune)

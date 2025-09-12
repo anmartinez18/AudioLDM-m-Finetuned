@@ -4,7 +4,7 @@ import requests
 from tqdm import tqdm
 
 # Zenodo URLs
-URL_MODEL_FINETUNED = "https://zenodo.org/record/15676557/files/audioldm_finetuned-m-full-finetuned.ckpt?download=1"
+URL_MODEL_FINETUNED = "https://zenodo.org/record/15676557/files/audioldm-m-full-finetuned.ckpt?download=1"
 URL_CLAP = "https://zenodo.org/record/15678883/files/clap_music_speech_audioset_epoch_15_esc_89.98.pt?download=1"
 URL_VAE = "https://zenodo.org/record/15678883/files/vae_mel_16k_64bins.ckpt?download=1"
 URL_HIFIGAN = "https://zenodo.org/record/15678883/files/hifigan_16k_64bins.ckpt?download=1"
