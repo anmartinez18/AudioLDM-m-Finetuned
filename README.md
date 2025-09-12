@@ -31,7 +31,7 @@ Uses the fine-tuned **AudioLDM** model and leverages the potential of the LLM **
 
 ```shell
 # 1) Create conda environment
-conda env create -n audioldm_finetuned python=3.10
+conda create -n audioldm_finetuned python=3.10
 conda activate audioldm_finetuned
 
 # 2) Clone the repo
@@ -40,6 +40,7 @@ cd AudioLDM_finetuned
 
 # 3) Install running environment
 pip install poetry
+poetry lock
 poetry install
 
 # 4) Download checkpoints (AudioLDM, VAE, CLAP, fine-tune)
