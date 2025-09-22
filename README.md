@@ -68,4 +68,6 @@ Launch the web application powered by Gradio
 
 ```shell
 python app.py
+
+# Enjoy !
 ```
