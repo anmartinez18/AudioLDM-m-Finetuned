@@ -35,8 +35,7 @@ torchlibrosa = { git = "https://github.com/qiuqiangkong/torchlibrosa.git" }
 
 
 [tool.poetry.scripts]
-get-checkpoints = "src.get_checkpoints:main"
-
+get-checkpoints = "audioldm_finetuned.src.get_checkpoints:main"
 
 
 [build-system]

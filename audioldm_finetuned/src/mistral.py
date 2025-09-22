@@ -4,10 +4,13 @@ from mistralai import Mistral
 from pathlib import Path
 import sys
 
-# Captura los argumentos
 argumentos = sys.argv
 
-api_key = os.environ["MISTRAL_API_KEY"] = "OWqBYgoTyHfQq3DcpOXSJlRKLpPWqdUe"
+
+api_key = os.environ.get("MISTRAL_API_KEY")
+if not api_key:
+    print("⚠️ Please set your MISTRAL_API_KEY!!!")
+    sys.exit(1)
 
 model_id = "open-mistral-7b"
 client = Mistral(api_key=api_key)

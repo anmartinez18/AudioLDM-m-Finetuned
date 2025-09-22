@@ -48,11 +48,24 @@ poetry run get-checkpoints
 
 ```
 
-## 🔥 Web App 🦉
+## 👉 Setting your Mistral API Key 🔑
+
+To use the system, you have to provide your own **Mistral API key**,  which you can obtain for free at [https://mistral.ai/](https://mistral.ai/).
+
+You must set the variable `MISTRAL_API_KEY` before running the application:
 
 ```shell
-# 5) Launch the web application powered by Gradio
+# On Windows (CMD)
+set MISTRAL_API_KEY="your_key_here"
+
+# On Linux/Mac
+export MISTRAL_API_KEY="your_key_here"
+
+```
+## 🔥 Web App 🦉
+
+Launch the web application powered by Gradio
+
+```shell
 python app.py
-
-# Enjoy!
-
+```
