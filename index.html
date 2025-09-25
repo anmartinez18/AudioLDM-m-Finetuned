@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    .comparison-table {
+      width: 80%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      text-align: center;
+      table-layout: fixed;
+      margin: 0 auto;
+     
+    }
+    .comparison-table th, .comparison-table td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    .comparison-table th {
+      background-color: #f0f0f0;
+    }
+    audio {
+      width: 90%; 
+      max-width: 300px;
+    }
+    caption {
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 1.2em;
+    }
+    .prompt-row td {
+      background-color: #c1d5f8;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1> 🔊 Audio Comparison: 📊 Base Model vs Fine-Tuned Model  </h1>
+  <p> Here we present differens audio clip generated from the base model and the finetuned model, so that you can appreciate the improvement over the original model  </p>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Base Model</th>
+        <th>Fine-Tuned Model</th>
+      </tr>
+    </thead>
+    <tbody>
+         <tr class="prompt-row">
+          <td colspan="2">Soft ocean waves in a calm sea at night</td>
+        </tr>
+      <tr>
+        <td>
+          <audio controls>
+            <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/base/soft_ocean_waves_in_a_calm_sea_at_night_Base.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td>
+          <audio controls>
+            <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/ft/soft_ocean_waves_in_a_calm_sea_at_night.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr class="prompt-row">
+          <td colspan="2">Rain from outside hitting the window</td>
+        </tr>
+      <tr>
+        <td>
+          <audio controls>
+            <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/base/Rain_from_outside_hitting_the_window_Base.wavv" type="audio/wav">
+          </audio>
+        </td>
+        <td>
+          <audio controls>
+            <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/ft/Rain_from_outside_hitting_the_window.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr class="prompt-row">
+          <td colspan="2">Strong wind blowing across a desert plain with no other sounds</td>
+        </tr>
+      <tr>
+        <td>
+          <audio controls>
+            <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/base/Strong_wind_Base.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td>
+          <audio controls>
+            <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/ft/Strong_wind.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr class="prompt-row">
+          <td colspan="2">Cozy fireplace in a cabin in a mountain</td>
+        </tr>
+       <tr>
+        <td>
+          <audio controls>
+            <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/base/Cozy_fireplace_in_a_cabin_in_a_mountain_Base.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td>
+          <audio controls>
+            <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/ft/Cozy_fireplace_in_a_cabin_in_a_mountain.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+      <tr class="prompt-row">
+          <td colspan="2">Rainfall in a village with thunder far away</td>
+        </tr>
+
+      <tr>
+        <td>
+          <audio controls>
+            <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/base/Rainfall_in_a_village_with_thunder_far_away_Base.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td>
+          <audio controls>
+            <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/ft/Rainfall_in_a_village_with_thunder_far_away.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+       <tr class="prompt-row">
+          <td colspan="2"> Mountain river flowing with some birds in the distance</td>
+        </tr>
+
+      <tr>
+        <td>
+          <audio controls>
+            <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/base/Mountain_river_Base.wav" type="audio/wav">
+          </audio>
+        </td>
+        <td>
+          <audio controls>
+            <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/ft/Mountain_river.wav" type="audio/wav">
+          </audio>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+ 
+
+</body>
+</html>
