@@ -71,3 +71,10 @@ python app.py
 
 # Enjoy !
 ```
+
+### 🎧 Demo de audio
+
+<audio controls>
+  <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/Rain_from_outside_hitting_the_window.wav" type="audio/wav">
+</audio>
+
