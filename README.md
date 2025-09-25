@@ -78,3 +78,6 @@ python app.py
   <source src="https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/Rain_from_outside_hitting_the_window.wav" type="audio/wav">
 </audio>
 
+[🎧 Escuchar demo](https://cdn.jsdelivr.net/gh/anmartinez18/AudioLDM-m-Finetuned@main/samples/Rain_from_outside_hitting_the_window.wav)
+
+
